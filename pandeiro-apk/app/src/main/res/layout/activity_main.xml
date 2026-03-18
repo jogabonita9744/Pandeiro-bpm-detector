@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E0A04">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PANDEIRO BPM"
+            android:textColor="#7A4E22"
+            android:textSize="11sp"
+            android:letterSpacing="0.3"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Deco line -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="#7A4E22"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Pandeiro circle -->
+        <FrameLayout
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Outer rim -->
+            <View
+                android:id="@+id/pandeiroPulse"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:background="@drawable/pandeiro_bg"/>
+
+            <!-- BPM inside circle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/bpmText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="#F0B429"
+                    android:textSize="72sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BPM"
+                    android:textColor="#C8874A"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.3"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Tempo name -->
+        <TextView
+            android:id="@+id/tempoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#D63B2F"
+            android:textSize="11sp"
+            android:letterSpacing="0.3"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Start/Stop button -->
+        <Button
+            android:id="@+id/startStopBtn"
+            android:layout_width="200dp"
+            android:layout_height="56dp"
+            android:text="DÉMARRER"
+            android:textColor="#0E0A04"
+            android:textSize="16sp"
+            android:letterSpacing="0.2"
+            android:textStyle="bold"
+            android:background="#F0B429"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Reset button -->
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:text="RESET"
+            android:textColor="#C8874A"
+            android:textSize="13sp"
+            android:letterSpacing="0.2"
+            android:background="#1A1208"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Sensitivity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SENSIBILITÉ"
+            android:textColor="#7A4E22"
+            android:textSize="10sp"
+            android:letterSpacing="0.3"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <SeekBar
+                android:id="@+id/sensBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progressTint="#F0B429"
+                android:thumbTint="#F0B429"/>
+
+            <TextView
+                android:id="@+id/sensVal"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#F0B429"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En attente"
+            android:textColor="#7A4E22"
+            android:textSize="11sp"
+            android:letterSpacing="0.2"/>
+
+    </LinearLayout>
+</ScrollView>
